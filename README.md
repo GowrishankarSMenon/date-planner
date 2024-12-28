@@ -70,7 +70,7 @@ To run the project locally, follow these steps:
 
 ## 🌍 Live Demo
 
-Check out the live version here: [Date Planner][https://your-vercel-url.com](https://date-planner-1vv386e67-gshanks-projects.vercel.app)
+Check out the live version here: [Date Planner](https://date-planner-gshanks-projects.vercel.app)
 
 ## 📝 Usage Instructions
 
