@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✧ vibe check ✧</title>
+  
+  <!-- External CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Local CSS -->
+  <!-- <link href="./public/style.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- Intro Animation -->
+  <div class="intro-animation">
+    <span>let's make memories ✨</span>
+  </div>
+
+  <!-- Main Container -->
+  <div class="wrapper">
+    <!-- Intro Screen -->
+    <div id="intro" class="animate__animated animate__fadeIn">
+      <h1 class="gradient-text">your vibe, my vibe <span class="emoji-sparkle">✧</span></h1>
+      <button id="start">it's about to be iconic <span class="emoji-sparkle">⭐</span></button>
+    </div>
+
+    <!-- Form Container -->
+    <div id="container" style="display: none;">
+      <!-- Date Selection -->
+      <div class="option active" id="option1">
+        <h2 class="gradient-text">mark your calendar bestie <span class="emoji-sparkle">🗓️</span></h2>
+        <div class="input-label">when's the move?</div>
+        <input type="date" id="dateSelect" min="">
+      </div>
+
+      <!-- Time Selection -->
+      <div class="option" id="option2">
+        <h2 class="gradient-text">time to slay <span class="emoji-sparkle">⌛</span></h2>
+        <select id="timeSelect">
+          <option value="">pick your moment...</option>
+          <option value="morning">morning main character energy (10-12)</option>
+          <option value="afternoon">afternoon slay (12-4)</option>
+          <option value="evening">golden hour vibes (4-7)</option>
+          <option value="night">night aesthetic (7-10)</option>
+        </select>
+      </div>
+
+      <!-- Location Selection -->
+      <div class="option" id="option3">
+        <h2 class="gradient-text">location reveal <span class="emoji-sparkle">✨</span></h2>
+        <select id="locationSelect" onchange="handleOther(this, 'vibeOther')">
+          <option value="">where we serving looks...</option>
+          <option value="lulu">Lulu Mall (don't even think about it)</option>
+          <option value="marine">Marine Drive (core memory spot)</option>
+          <option value="center">Center Square (elite hangout)</option>
+          <option value="fort">Fort Kochi (aesthetic on point)</option>
+          <option value="fort">idk nature?</option>
+          <option value="other">plot twist: somewhere else</option>
+        </select>
+        <input type="text" id="vibeOther" placeholder="spill your secret spot..." style="display:none;">
+      </div>
+
+      <!-- Activity Selection -->
+      <div class="option" id="option4">
+        <h2 class="gradient-text">vibe check <span class="emoji-sparkle">🌟</span></h2>
+        <select id="activitySelect" onchange="handleOther(this, 'activityOther')">
+          <option value="">the moment we're creating...</option>
+          <option value="cafe">café hopping (living for this)</option>
+          <option value="movie">movie date (certified classic)</option>
+          <option value="food">food tour (taste >>> everything)</option>
+          <option value="chill">just vibing (elite energy)</option>
+          <option value="other">bestie wait, I got tea</option>
+        </select>
+        <input type="text" id="activityOther" placeholder="spill the tea..." style="display:none;">
+      </div>
+
+      <!-- Notes Section -->
+      <div class="option" id="option5">
+        <h2 class="gradient-text">thoughts reveal <span class="emoji-sparkle">💭</span></h2>
+        <textarea id="thoughts" rows="3" placeholder="drop your manifestations here... any specific spots or vibes you're claiming?"></textarea>
+      </div>
+
+      <!-- Personal Info -->
+      <div class="option" id="option6">
+        <h2 class="gradient-text">who's the main character? <span class="emoji-sparkle">💫</span></h2>
+        <input type="text" id="name" placeholder="dawg what's your name?">
+      </div>
+
+      <!-- Success Message -->
+      <div class="success-message" id="successMessage">
+        <h2 class="gradient-text">periodt bestie! ✨</h2>
+        <p>aight bet</p>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="nav-buttons">
+        <button id="prev" onclick="prev()">← previous step</button>
+        <button id="next" onclick="next()">slay next →</button>
+      </div>
+      
+      <!-- Submit Button -->
+      <button id="submit" onclick="submitPlan(); setSubmitButtonState();">it's giving perfect energy ✨</button>
+
+    </div>
+  </div>
+
+  <!-- Local JavaScript -->
+  <!-- <script src="./public/brain.js"></script> -->
+  <script src="/brain.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+       emailjs.init({
+         publicKey: "D0Mm0cf4AVMp-MT-W",
+       });
+    })();
+ </script>
+
+</body>
+</html>
